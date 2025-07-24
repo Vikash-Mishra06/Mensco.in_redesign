@@ -154,14 +154,13 @@ body {
 }
 
 .hero-wrap1 {
-  background-image: url(Images/Mc-hero1.png) !important;
+  background-image: url(/Images/Mc-hero1.png) !important;
 }
 .hero-wrap2 {
-  background-image: url(Images/mc-hero4.251Z.png) !important;
+  background-image: url(/Images/mc-hero4.251Z.png) !important;
 }
-
 .hero-wrap3 {
-  background-image: url(Images/Mc-hero3.png) !important;
+  background-image: url(/Images/Mc-hero3.png) !important;
 }
 
 
