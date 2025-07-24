@@ -38,6 +38,11 @@ body {
     background-color: var(--primary-color);
     margin: 0;
 }
+.btn:hover{
+    background-color: var(--black-color) !important;
+    border: 1px solid var(--white-color) !important;
+    color: var(--white-color) !important;
+}
 
 .cart-count {
     font-size: 15px;
@@ -154,63 +159,40 @@ body {
 }
 
 .hero-wrap1 {
-  background-image: url(/Images/Mc-hero1.png) !important;
+  background-image: url(/Images/mc-hero-5.png) !important;
 }
 .hero-wrap2 {
   background-image: url(/Images/mc-hero4.251Z.png) !important;
 }
 .hero-wrap3 {
-  background-image: url(/Images/Mc-hero3.png) !important;
+  background-image: url(/Images/mc-hero-6.png) !important;
 }
-
-
-
-/* New classes to control content side */
-.content-left {
-  margin-right: auto;
-  text-align: left;
+.hero-wrap4 {
+  background-image: url(/Images/mc-hero-7.png) !important;
 }
-
-.content-right {
-  margin-left: auto;
-  text-align: right;
+.hero-wrap5 {
+  background-image: url(/Images/mc-hero-9.png) !important;
 }
 
 .hero-content {
-    margin-top: 5rem;
-  width: 50%;
-  opacity: 0;
-  animation: anim-left 0.5s forwards linear;
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
-
-.hero-content h5 {
-  color: var(--white-color);
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-}
-
-.hero-content h1 {
-    color: var(--white-color);
-  font-size: 4rem;
-  font-weight: 600;
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-}
-
-.hero-content p {
-  font-size: 1.2rem;
-  width: 80%;
-  color: var(--white-color);
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-}
-
 .hero-btn {
+  position: absolute;
+  bottom: 5%; /* Adjust this as needed */
+  left: 50%;
+  transform: translateX(-50%);
   font-size: 1.5rem;
   width: 200px !important;
-  background-color: var(--black-color);
+  background-color: var(--primary-color);
   color: var(--white-color);
 }
 
+
 .hero-btn:hover {
-  background-color: var(--primary-color) !important;
+  background-color: var(--black-color) !important;
   color: var(--white-color);
 }
 
@@ -235,46 +217,19 @@ body {
   }
 }
 
-/* Responsive Styles */
-@media (max-width: 1199px) {
-  .hero-content h1 {
-    font-size: 3.3rem;
-  }
-}
 
 @media (max-width: 991px) {
   .hero-wrap,
   .hero-wrap2,
-  .hero-wrap3 {
-    width: 100vw;
-  }
-
-  .hero-content {
-    width: 60%;
-  }
-
-  .hero-content h1 {
-    font-size: 2.8rem;
+  .hero-wrap3,
+  .hero-wrap4,
+  .hero-wrap5
+  {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
   }
 }
-
-@media (max-width: 767px) {
-  .hero-content {
-    width: 90%;
-    text-align: center !important;
-    margin: 0 auto !important;
-  }
-
-  .hero-content h1 {
-    font-size: 2.5rem;
-  }
-
-  .content-left,
-  .content-right {
-    margin: 0 auto !important;
-  }
-}
-
 
 
 /* Products Section */
@@ -424,7 +379,6 @@ body {
     top: 50%;
     background-color: var(--black-color);
 }
-
 
 
 .btn-custome2 {
@@ -666,6 +620,9 @@ body {
 .favourite-card:hover .favourite-beauty-banner::after {
     animation: shine 0.8s ease forwards;
 }
+.favourite-card{
+    margin-bottom: 4rem;
+}
 
 @keyframes shine {
     from {
@@ -704,6 +661,7 @@ body {
 .discover-info button {
     width: 200px;
     font-size: 1.2rem;
+    margin-bottom: 2rem;
 }
 
 .section-image::after {
@@ -821,9 +779,9 @@ body {
 
 /* About */
 .about-hero-section {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/Images/Mc-hero1.png) !important;
     background-size: cover;
-    background-position: center;
+    background-position: center !important;
     background-attachment: fixed;
     min-height: 60vh;
 }

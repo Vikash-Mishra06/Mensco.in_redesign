@@ -88,8 +88,6 @@ function Products() {
                                 <option value="all">All Product</option>
                                 <option value="new">New Product</option>
                                 <option value="sale">Sale Products</option>
-                                {/* <option value="low">Price: Low to High</option>
-                                <option value="high">Price: High to Low</option> */}
                             </select>
                         </div>
                     </div>
@@ -130,17 +128,17 @@ function Products() {
                                     </Link>
 
                                     <Link to={`/product/${product.id}`} className="text-decoration-none text-black">
-                                        <div className="product-content pt-3">
-                                            {product.oldprice ? (
-                                                <div className="price">
-                                                    <span className="text-muted text-decoration-line-through me-2">{product.oldprice}</span>
-                                                    <span className="fw-bold text-muted">{product.price}</span>
-                                                </div>
-                                            ) : (
-                                                <span className="price">{product.price}</span>
+                                        <div className="price-section d-flex gap-3 justify-content-center align-items-center pt-2 mb-2">
+                                            {product.oldprice && (
+                                                <span className="old-price text-decoration-line-through text-muted ms-2">
+                                                    {product.oldprice}
+                                                </span>
                                             )}
-                                            <h3 className="title pt-1">{product.productName}</h3>
+                                            <span className="current-price fw-bold" style={{ fontSize: '20px', color: '#4e7661' }}>
+                                                {product.price}
+                                            </span>
                                         </div>
+                                        <h3 className="title fw-semibold" style={{ fontSize: '20px' }}>{product.productName}</h3>
                                     </Link>
                                 </div>
                             </div>

@@ -12,7 +12,7 @@ import { Link } from 'react-router-dom'
 function Footer() {
   return (
     <>
-      <div className="footer mt-5 py-5">
+      <div className="footer  py-5">
         <div className="container">
           <div className="row gy-4">
             <div className="col-lg-8">

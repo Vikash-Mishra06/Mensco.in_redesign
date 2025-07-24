@@ -194,7 +194,7 @@ function ProductDetails() {
                     color: 'white'
                   }}
                 >
-                  <Link to='/checkout' className='btn w-100'><i class="ri-shopping-cart-2-line"></i> Checkout</Link>
+                  <Link to='/checkout' className='btn w-100'><i className="ri-shopping-cart-2-line"></i> Checkout</Link>
                 </button>
               </div>
               <div className="product-meta">

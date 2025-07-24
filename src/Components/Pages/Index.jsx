@@ -16,8 +16,6 @@ import subBanner2 from '/Images/mc-banner-3.png'
 
 import favourite1 from '/Images/mc-favourite1.png'
 
-
-
 import serviceImg1 from './../../assets/service-icon-1.svg'
 import serviceImg2 from './../../assets/service-icon-2.svg'
 import serviceImg3 from './../../assets/service-icon-3.svg'
@@ -25,10 +23,8 @@ import serviceImg4 from './../../assets/service-icon-4.svg'
 
 import aibanner from '/Images/Mc-hero2.jpg'
 
-
 import discover1 from '/Images/mc-discover1.png'
 import discover2 from '/Images/mc-discover3.png'
-
 
 import socialImage1 from '/Images/mc-product-1f.png'
 import socialImage2 from '/Images/mc-product-2f.png'
@@ -86,52 +82,50 @@ function Index() {
                 >
                     <SwiperSlide>
                         <div className="hero-wrap hero-wrap1">
-                            <div className="hero-content content-left">
-                                {/* <h5>- ESSENTIAL ITEMS -</h5>
-                                <h1>Beauty Inspired <br />by Real Life</h1>
-                                <p className="my-3">
-                                    Made using clean, non-toxic ingredients, our products are designed for everyone
-                                </p>
-                                <Link to="/cart" className="btn hero-btn mt-3">Shop Now</Link> */}
+                            <div className="hero-content">
+                                <Link to="/cart" className="btn hero-btn mt-3">Shop Now</Link>
                             </div>
                         </div>
                     </SwiperSlide>
 
                     <SwiperSlide>
                         <div className="hero-wrap hero-wrap2">
-                            <div className="hero-content content-left">
-                                {/* <h5>- NEW COLLECTION -</h5>
-                                <h1>Get The Perfectly Hydrated Skin</h1>
-                                <p className="my-3">
-                                    Made using clean, non-toxic ingredients, our products are designed for everyone
-                                </p> */}
-                                {/* <Link to="/cart" className="btn hero-btn mt-3">Shop Now</Link> */}
+                            <div className="hero-content">
+                                 <Link to="/cart" className="btn hero-btn mt-3">Shop Now</Link>
                             </div>
                         </div>
                     </SwiperSlide>
 
                     <SwiperSlide>
                         <div className="hero-wrap hero-wrap3">
-                            <div className="hero-content content-left">
-                                {/* <h5>- GET THE GLOW -</h5>
-                                <h1>Be Your Kind <br />of Beauty</h1>
-                                <p className="my-3">
-                                    Made using clean, non-toxic ingredients, our products are designed for everyone
-                                </p>
-                                <Link to="/cart" className="btn hero-btn mt-3">Shop Now</Link> */}
+                            <div className="hero-content">
+                                <Link to="/cart" className="btn hero-btn mt-3">Shop Now</Link>
                             </div>
                         </div>
                     </SwiperSlide>
-
+                    <SwiperSlide>
+                        <div className="hero-wrap hero-wrap4">
+                            <div className="hero-content">
+                                <Link to="/cart" className="btn hero-btn mt-3">Shop Now</Link>
+                            </div>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className="hero-wrap hero-wrap5">
+                            <div className="hero-content">
+                                <Link to="/cart" className="btn hero-btn mt-3">Shop Now</Link>
+                            </div>
+                        </div>
+                    </SwiperSlide>
                 </Swiper>
             </div>
 
 
             {/* Products  */}
-            <div className="product-container py-5 my-5">
+            <div className="product-container py-5 my-3">
                 <div className="container position-relative">
                     <div className="row">
-                        <div className="section-title mb-5 product-title text-center">
+                        <div className="section-title mb-2 product-title text-center">
                             <h2 className="fw-semibold fs-1">Our Featured Products</h2>
                             <p className="text-muted">Get the skin you want to feel</p>
                         </div>
@@ -194,11 +188,11 @@ function Index() {
                                                     {product.oldprice}
                                                 </span>
                                             )}
-                                            <span className="current-price fw-bold" style={{ fontSize: '24px', color: '#4e7661' }}>
+                                            <span className="current-price fw-bold" style={{ fontSize: '20px', color: '#4e7661' }}>
                                                 {product.price}
                                             </span>
                                         </div>
-                                        <h3 className="title" style={{ fontSize: '22px' }}>{product.productName}</h3>
+                                        <h3 className="title fw-semibold" style={{ fontSize: '20px' }}>{product.productName}</h3>
                                     </Link>
                                 </div>
                             </SwiperSlide>
@@ -285,11 +279,11 @@ function Index() {
                     <div className="row">
                         <div className="col-lg-5">
                             <div className="favourite-card">
-                                <div className="favourite-beauty-banner mb-lg-0 mb-5 position-relative">
+                                <div className="favourite-beauty-banner mb-lg-0 mb-2 position-relative">
                                     <img src={favourite1} className="img-fluid" alt="" />
                                 </div>
                                 <div className="discover-info mt-3">
-                                    <h3 className="fs-1">Empower Yourself</h3>
+                                    <h3 className="fs-2">Empower Yourself</h3>
                                     <p className="fs-4">Get the skin you want to feel</p>
                                     <Link to='/products' className="btn mt-2">Explore Now <i className="bi bi-arrow-right ms-2"></i></Link>
                                 </div>
@@ -341,11 +335,11 @@ function Index() {
                                                             {product.oldprice}
                                                         </span>
                                                     )}
-                                                    <span className="current-price fw-bold" style={{ fontSize: '16px', color: '#4e7661' }}>
+                                                    <span className="current-price fw-bold" style={{ fontSize: '18px', color: '#4e7661' }}>
                                                         {product.price}
                                                     </span>
                                                 </div>
-                                                <h3 className="title" style={{ fontSize: '20px' }}>{product.productName}</h3>
+                                                <h3 className="title fw-semibold" style={{ fontSize: '18px' }}>{product.productName}</h3>
                                             </Link>
                                         </div>
                                     </div>
@@ -357,7 +351,7 @@ function Index() {
             </div>
 
             {/* Discover */}
-            <div className="discover container py-5">
+            <div className="discover container">
                 <div className="section-title mb-5 favourite-beauty-title text-center">
                     <h2 className="fw-semibold fs-1">More to Discover</h2>
                     <p className="text-center">Our bundles were designed to conveniently package <br />your tanning essentials while saving your money</p>

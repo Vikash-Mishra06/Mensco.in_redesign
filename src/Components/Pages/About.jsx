@@ -34,16 +34,16 @@ function About() {
     };
 
     const stats = [
-        { number: "500+", label: "Happy Clients", icon: <FaHeart className="text-primary" /> },
-        { number: "50+", label: "Products", icon: <FaLeaf className="text-primary" /> },
-        { number: "10+", label: "Years Experience", icon: <FaAward className="text-primary" /> },
+        { number: "5000+", label: "Happy Clients", icon: <FaHeart className="text-primary" /> },
+        { number: "10+", label: "Products", icon: <FaLeaf className="text-primary" /> },
+        { number: "5+", label: "Years Experience", icon: <FaAward className="text-primary" /> },
         { number: "24/7", label: "Support", icon: <FaUsers className="text-primary" /> }
     ];
 
     const teamMembers = [
-        { name: "Sarah Johnson", role: "Founder & CEO", image: team1 },
-        { name: "Michael Chen", role: "Product Designer", image: team2 },
-        { name: "Emily Rodriguez", role: "Marketing Director", image: team3 }
+        { name: "Vicky Patel", role: "Founder & CEO", image: team1 },
+        { name: "Priyanka Sen", role: "Product Designer", image: team2 },
+        { name: "Purvi Singh", role: "Marketing Director", image: team3 }
     ];
 
     return (
@@ -64,7 +64,7 @@ function About() {
                     >
                         <motion.div className="col-md-8 mx-auto text-center" variants={itemVariants}>
                             <p className="text-uppercase text-white small mb-2 letter-spacing-2">Our Story</p>
-                            <h1 className="fw-bold display-4 text-white mb-4">About Furnex</h1>
+                            <h1 className="fw-bold display-4 text-white mb-4">About <span>MENSCO</span></h1>
                             <p className="lead text-white-50 mb-0">
                                 Crafting beauty essentials with passion and purpose since 2010
                             </p>
@@ -83,14 +83,12 @@ function About() {
                         transition={{ duration: 0.6 }}
                         viewport={{ once: true }}
                     >
-                        <img src={head} alt="Decoration" className="mb-4" style={{ maxWidth: '100px' }} />
+                        
                         <h2 className="fw-bold mb-4 display-5">
-                            We <span className="text-primary1">believe</span> in beauty with purpose
+                            MENSCO <span className="text-primary1">believe</span> in beauty with purpose
                         </h2>
                         <p className="text-muted mx-auto fs-5" style={{ maxWidth: '700px' }}>
-                            At Furnex, we combine nature's finest ingredients with cutting-edge science to create 
-                            products that nourish your skin while respecting our planet. Our cruelty-free, 
-                            sustainable approach means you can feel good about every purchase.
+                            Mensco is built on the principle that men deserve the same level of attention and care for their skin as women. Skincare transcends mere appearance — it’s a form of self-care that's integral to health, confidence, and overall well-being.
                         </p>
                     </motion.div>
                 </div>
@@ -119,9 +117,7 @@ function About() {
                             <span className="text-primary1 small text-uppercase letter-spacing-2">Our Story</span>
                             <h3 className="fw-bold mb-3 display-6">From humble beginnings</h3>
                             <p className="text-muted mb-4">
-                                Founded in a small home laboratory in 2010, Furnex began with a simple mission: 
-                                to create clean, effective skincare without compromise. What started as a passion 
-                                project has grown into a trusted brand available in over 20 countries.
+                                Mensco is thoughtfully crafted for Indian men, addressing skin damage, aging, and pollution exposure with high-quality and easy-to-use products. Backed by science, our products are formulated to deliver tangible results.
                             </p>
                             <ul className="list-unstyled">
                                 <li className="mb-2 d-flex align-items-start">
@@ -160,9 +156,8 @@ function About() {
                             <span className="text-primary1 small text-uppercase letter-spacing-2">Our Promise</span>
                             <h3 className="fw-bold mb-3 display-6">Beauty that cares</h3>
                             <p className="text-muted mb-4">
-                                We're committed to transparency in everything we do. From sourcing ingredients 
-                                to manufacturing processes, we maintain the highest ethical standards to deliver 
-                                products you can trust.
+                                We focus on quality over price. We offer effective solutions tailored to your needs for lasting, visible improvements.
+                                Our products are formulated with high-quality ingredients, backed by scientific research, and free from harmful chemicals, GMO and/or animal testing.
                             </p>
                             <div className="d-flex align-items-center mb-3">
                                 <div className="bg-primary bg-opacity-10 p-3 rounded-circle me-3">
@@ -208,8 +203,8 @@ function About() {
                                     <div className="icon-lg bg-primary bg-opacity-10 text-primary rounded-circle mb-3 mx-auto">
                                         {stat.icon}
                                     </div>
-                                    <h3 className="fw-bold mb-1">{stat.number}</h3>
-                                    <p className="mb-0 text-muted">{stat.label}</p>
+                                    <h3 className="fw-bold mb-1 text-primary1">{stat.number}</h3>
+                                    <p className="mb-0 text-muted ">{stat.label}</p>
                                 </div>
                             </motion.div>
                         ))}
@@ -230,7 +225,7 @@ function About() {
                         <span className="text-primary1 small text-uppercase letter-spacing-2">Our Family</span>
                         <h2 className="fw-bold display-5 mb-3">Meet the Team</h2>
                         <p className="text-muted mx-auto" style={{ maxWidth: '600px' }}>
-                            The passionate individuals behind Furnex who work tirelessly to bring you the best in 
+                            The passionate individuals behind Mensco who work tirelessly to bring you the best in 
                             natural beauty care.
                         </p>
                     </motion.div>
@@ -268,7 +263,7 @@ function About() {
             </section>
 
             {/* CTA Section */}
-            <section className="py-5 py-lg-7 bg-dark text-white position-relative overflow-hidden">
+            <section className="py-5 py-lg-7 bg-dark text-white position-relative overflow-hidden mb-0">
                 <div className="container position-relative z-index-1">
                     <motion.div 
                         className="row justify-content-center text-center"
@@ -278,21 +273,20 @@ function About() {
                         viewport={{ once: true }}
                     >
                         <div className="col-lg-8">
-                            <h2 className="fw-bold display-5 mb-4">Ready to experience Furnex?</h2>
+                            <h2 className="fw-bold display-5 mb-4">Ready to experience <span className='text-primary1'>MENSCO</span>?</h2>
                             <p className="lead mb-5 opacity-75">
                                 Join thousands of satisfied customers who trust our products for their daily beauty routine.
                             </p>
                             <motion.button
-                                className="btn btn-primary btn-lg px-5 py-3"
+                                className="btn btn-lg px-5 py-3 border-0"
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                             >
-                                Shop Our Collection
+                                Our Collections
                             </motion.button>
                         </div>
                     </motion.div>
                 </div>
-                <div className="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
             </section>
 
             
