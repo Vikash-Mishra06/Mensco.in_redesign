@@ -1,5 +1,7 @@
 import React from "react";
 
+import subBanner1 from '/Images/mc-banner-1.png'
+
 function Contact() {
   return (
     <div className="container py-5 mt-5">
@@ -40,7 +42,7 @@ function Contact() {
         
         <div className="col-md-6">
           <img
-            src="/src/assets2/mc-banner-1.png"
+            src={subBanner1}
             alt="contact art"
             className="img-fluid rounded"
           />
