@@ -2,142 +2,96 @@
     
     {
         "id": 1,
-        "image": "/Images/product-2-1.webp",
-        "secondaryImage": "/Images/product-2-2.webp",
-        "productName": "Perfecting Facial Oil",
-        "price": "$15.00",
+        "image": "/src/assets2/mc-product-1f.png",
+        "secondaryImage": "/src/assets2/mc-product-1b.png",
+        "productName": "AM & PM Essentials",
+        "oldprice": "Rs. 1,300.00",
+        "price": "Rs. 1,099.00",
         "tag": "Sale"
     },
     {
         "id": 2,
-        "image": "/Images/product-3-1.webp",
-        "secondaryImage": "/Images/product-3-2.webp",
-        "productName": "Enriched Body Wash",
-        "price": "$15.00",
+        "image": "/src/assets2/mc-product-2f.png",
+        "secondaryImage": "/src/assets2/mc-product-2b.png",
+        "productName": "Advanced Care Kit",
+        "oldprice": "Rs. 1,700.00",
+        "price": "Rs. 1,499.00",
         "tag": "New"
 
     },
     {
         "id": 3,
-        "image": "/Images/product-4-1.webp",
-        "secondaryImage": "/Images/product-4-2.webp",
-        "productName": "Shield Shampoo",
-        "price": "$10.00",
+        "image": "/src/assets2/mc-product-3f.png",
+        "secondaryImage": "/src/assets2/mc-product-3b.png",
+        "productName": "Signature Grooming Kit",
+        "oldprice": "Rs. 2,500.00",
+        "price": "Rs. 1,999.00",
         "tag": "New"
     },
     {
         "id": 4,
-        "image": "/Images/product-5-1.webp",
-        "secondaryImage": "/Images/product-5-2.jpg",
-        "productName": "Enriched Hand Wash",
-        "price": "$15.00",
-        "oldprice": "$25.00",
+        "image": "/src/assets2/mc-product-4f.png",
+        "secondaryImage": "/src/assets2/mc-product-4b.png",
+        "productName": "Restoring Night Cream With Retinol",
+        "price": "Rs. 699.00",
         "tag": "Sale"
     },
     {
         "id": 5,
-        "image": "/Images/product-6-1.webp",
-        "secondaryImage": "/Images/product-6-2.webp",
-        "productName": "Enriched Duo",
-        "price": "$28.00",
+        "image": "/src/assets2/mc-product-5f.png",
+        "secondaryImage": "/src/assets2/mc-product-5b.png",
+        "productName": "Hydrating Moisturiser With SPF 25",
+        "oldprice": "Rs. 999.00",
+        "price": "Rs. 599.00",
         "tag": "New"
 
     },
     {
         "id": 6,
-        "image": "/Images/product-7-1.webp",
-        "secondaryImage": "/Images/product-7-2.webp",
-        "productName": "Shield Spray",
-        "price": "$37.00",
+        "image": "/src/assets2/mc-product-6f.png",
+        "secondaryImage": "/src/assets2/mc-product-6b.gif",
+        "productName": "SRevitalizing Active Face Wash with Algae",
+        "oldprice": "Rs. 900.00",
+        "price": "Rs. 399.00",
         "tag": "New"
 
         
     },
     {
         "id": 7,
-        "image": "/Images/product-8-1.webp",
-        "secondaryImage": "/Images/product-8-2.webp",
-        "productName": "Nourishing Eye Cream",
-        "price": "$15.00",
-        "tag": "Sale"
+        "image": "/src/assets2/mc-product-7f.png",
+        "secondaryImage": "/src/assets2/mc-product-7b.png",
+        "productName": "Hydrating Moisturiser With SPF 25",
+        "oldprice": "Rs. 999.00",
+        "price": "Rs. 599.00",
+        "tag": "New"
     },
     {
         "id": 8,
-        "image": "/Images/product-9-1.webp",
-        "secondaryImage": "/Images/product-9-2.webp",
-        "productName": "Nourishing Moisturing Mask",
-        "price": "$15.00",
+        "image": "/src/assets2/mc-product-8f.png",
+        "secondaryImage": "/src/assets2/mc-product-8b.png",
+        "productName": "Restoring Night Cream With Retinol",
+        "price": "Rs. 699.00",
         "tag": "Sale"
     },
     {
         "id": 9,
-        "image": "/Images/product-10-1.webp",
-        "secondaryImage": "/Images/product-10-2.webp",
-        "productName": "Moisturizing Polishing Treatment",
-        "price": "$27.00",
-        "oldprice":"$80.00",
+        "image": "/src/assets2/mc-product-9f.png",
+        "secondaryImage": "/src/assets2/mc-product-9b.gif",
+        "productName": "Reviving Under Eye Serum With Caffeine",
+        "oldprice":"Rs. 1,300.00",
+        "price": "Rs. 799.00",
         "tag": "Sale"
 
     },
     {
         "id": 10,
-        "image": "/Images/product-11-1.webp",
-        "secondaryImage": "/Images/product-11-2.webp",
-        "productName": "Scalp Moisturing Cream",
-        "price": "$35.00",
+        "image": "/src/assets2/mc-product-10f.png",
+        "secondaryImage": "/src/assets2/mc-product-10b.gif",
+        "productName": "Daily Protection Kit",
+        "oldprice": "Rs. 1,300.00",
+        "price": "Rs. 899.00",
         "tag": "New"
 
-    },
-    {
-        "id": 11,
-        "image": "/Images/product-12-1.webp",
-        "secondaryImage": "/Images/product-12-2.webp",
-        "productName": "Natural Coconut Oil",
-        "price": "$15.00",
-        "tag": "New"
-
-        
-    },
-    {
-        "id": 12,
-        "image": "/Images/product-13-1.webp",
-        "secondaryImage": "/Images/product-13-2.webp",
-        "productName": "Sideway Travel Case Set",
-        "price": "$27.00",
-        "tag": "New"
-    },
-    {
-        "id": 13,
-        "image": "/Images/product-14-1.webp",
-        "secondaryImage": "/Images/product-14-2.webp",
-        "productName": "Untagling Comb",
-        "price": "$15.00",
-        "tag": "New"
-    },
-    {
-        "id": 14,
-        "image": "/Images/product-15-1.webp",
-        "secondaryImage": "/Images/product-15-2.webp",
-        "productName": "Vacation Travel Case Set",
-        "price": "$43.00",
-        "oldprice": "$80.00",
-        "tag": "Sale"
-    },
-    {
-        "id": 15,
-        "image": "/Images/product-16-1.webp",
-        "secondaryImage": "/Images/product-16-2.webp",
-        "productName": "Vaulted Mirror",
-        "price": "$17.00",
-        "oldprice": "$22.00",
-        "tag": "Sale"
-    },
-    {
-        "id": 16,
-        "image": "/Images/product-1-1.webp",
-        "secondaryImage": "/Images/product-1-2.webp",
-        "productName": "Shield Conditioner",
-        "price": "$27.00",
-        "tag": "New"
     }
 ]

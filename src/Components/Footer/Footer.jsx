@@ -6,6 +6,7 @@ import payment3 from './../../assets/payment-3.svg'
 import payment4 from './../../assets/payment-4.svg'
 import payment5 from './../../assets/payment-5.svg'
 import payment6 from './../../assets/payment-6.svg'
+import { Link } from 'react-router-dom'
 
 
 function Footer() {
@@ -28,16 +29,19 @@ function Footer() {
                   <h3 className="mb-3">Useful Links</h3>
                   <ul className="list-unstyled">
                     <li className="mb-2">
-                      <a href="#" className='text-decoration-none'>New Products</a>
+                      <Link to="/" className='text-decoration-none'>Home</Link>
                     </li>
                     <li className="mb-2">
-                      <a href="#" className='text-decoration-none'>Best Sellers</a>
+                      <Link to="/products" className='text-decoration-none'>Products</Link>
                     </li>
                     <li className="mb-2">
-                      <a href="#" className='text-decoration-none'>Bundle & Save</a>
+                      <Link to="/sales" className='text-decoration-none'>Sales</Link>
                     </li>
                     <li className="mb-2">
-                      <a href="#" className='text-decoration-none'>Online Gift Card</a>
+                      <Link to="/about" className='text-decoration-none'>About Us</Link>
+                    </li>
+                    <li className="mb-2">
+                      <Link to="/contact" className='text-decoration-none'>Contact</Link>
                     </li>
                   </ul>
                 </div>
@@ -75,9 +79,10 @@ function Footer() {
             <div className="row align-items-start">
               <div className="col-lg-4">
                 <div className="footer-icon-text d-flex gap-3 justify-content-center justify-content-lg-end">
-                  <p>FURNEX 2025 | Powered by Shopify</p>
+                  <p>MENSCO 2025 | Powered by Shopify</p>
                   <div className="footer-icons d-flex gap-2">
-                    <i className="ri-instagram-line"></i>
+                    <a href="https://www.instagram.com/mensco.in/"><i className="bi bi-instagram"></i></a>
+
                     <i className="ri-twitter-x-line"></i>
                     <i className="ri-facebook-circle-fill"></i>
                     <i className="ri-youtube-fill"></i>
@@ -87,7 +92,7 @@ function Footer() {
               <div className="col-lg-4">
                 <div className="footer-logo text-center">
                   <a href="#" className='navbar-brand mx-auto order-0'>
-                    <h2 className='m-0 fw-bold' style={{color: '#4e7661'}}>FURNEX</h2>
+                    <h2 className='m-0 fw-bold' style={{color: '#4e7661'}}>MENSCO</h2>
                   </a>
                 </div>
               </div>

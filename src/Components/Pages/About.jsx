@@ -6,6 +6,7 @@ import about2 from './../../assets/discover-1.webp';
 import team1 from '../../assets/team-1.webp';
 import team2 from '../../assets/team-2.webp';
 import team3 from '../../assets/team-3.webp';
+
 import { FaLeaf, FaHeart, FaAward, FaUsers } from 'react-icons/fa';
 
 function About() {
@@ -107,7 +108,7 @@ function About() {
                         <motion.div className="col-md-6" variants={itemVariants}>
                             <div className="about-img-container rounded overflow-hidden shadow-lg">
                                 <img 
-                                    src={about1} 
+                                    src='/src/assets2/mc-banner-1.png'
                                     alt="Our Beginnings" 
                                     className="img-fluid w-100 hover-zoom"
                                 />
@@ -148,7 +149,7 @@ function About() {
                         <motion.div className="col-md-6" variants={itemVariants}>
                             <div className="about-img-container rounded overflow-hidden shadow-lg">
                                 <img 
-                                    src={about2} 
+                                    src='/src/assets2/mc-banner-1.png'
                                     alt="Our Mission" 
                                     className="img-fluid w-100 hover-zoom"
                                 />

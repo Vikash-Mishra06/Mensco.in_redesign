@@ -71,49 +71,57 @@ function Index() {
     return (
         <>
             {/* hero */}
-            <div className="hero ">
+            <div className="hero">
                 <Swiper
                     slidesPerView={1}
                     spaceBetween={0}
                     modules={[Autoplay, EffectFade]}
                     effect="fade"
                     loop={true}
-                    autoplay={{
-                        delay: 3000
-                    }}
+                    autoplay={{ delay: 3000 }}
                 >
                     <SwiperSlide>
                         <div className="hero-wrap hero-wrap1">
-                            <div className="hero-content">
-                                <h5>- ESSENTIAL ITEMS -</h5>
+                            <div className="hero-content content-left">
+                                {/* <h5>- ESSENTIAL ITEMS -</h5>
                                 <h1>Beauty Inspired <br />by Real Life</h1>
-                                <p className="my-3">Made using clean, non-toxic ingredients, our products are designed for everyone</p>
-                                <Link to='/cart' className="btn hero-btn mt-3">Shop Now</Link>
+                                <p className="my-3">
+                                    Made using clean, non-toxic ingredients, our products are designed for everyone
+                                </p>
+                                <Link to="/cart" className="btn hero-btn mt-3">Shop Now</Link> */}
                             </div>
                         </div>
                     </SwiperSlide>
+
                     <SwiperSlide>
                         <div className="hero-wrap hero-wrap2">
-                            <div className="hero-content">
-                                <h5>- NEW COLLECTION -</h5>
+                            <div className="hero-content content-left">
+                                {/* <h5>- NEW COLLECTION -</h5>
                                 <h1>Get The Perfectly Hydrated Skin</h1>
-                                <p className="my-3">Made using clean, non-toxic ingredients, our products are designed for everyone</p>
-                                <Link to='/cart' className="btn hero-btn mt-3">Shop Now</Link>
+                                <p className="my-3">
+                                    Made using clean, non-toxic ingredients, our products are designed for everyone
+                                </p> */}
+                                {/* <Link to="/cart" className="btn hero-btn mt-3">Shop Now</Link> */}
                             </div>
                         </div>
                     </SwiperSlide>
+
                     <SwiperSlide>
                         <div className="hero-wrap hero-wrap3">
-                            <div className="hero-content">
-                                <h5>- GET THE GLOW -</h5>
+                            <div className="hero-content content-left">
+                                {/* <h5>- GET THE GLOW -</h5>
                                 <h1>Be Your Kind <br />of Beauty</h1>
-                                <p className="my-3">Made using clean, non-toxic ingredients, our products are designed for everyone</p>
-                                <Link to='/cart' className="btn hero-btn mt-3">Shop Now</Link>
+                                <p className="my-3">
+                                    Made using clean, non-toxic ingredients, our products are designed for everyone
+                                </p>
+                                <Link to="/cart" className="btn hero-btn mt-3">Shop Now</Link> */}
                             </div>
                         </div>
                     </SwiperSlide>
+
                 </Swiper>
             </div>
+
 
             {/* Products  */}
             <div className="product-container py-5 my-5">
@@ -128,6 +136,7 @@ function Index() {
                     <Swiper
                         slidesPerView={4}
                         spaceBetween={20}
+
                         navigation={{ nextEl: ".product-swiper-next", prevEl: ".product-swiper-prev" }}
                         breakpoints={{
                             1399: { slidesPerView: 4 },
@@ -138,7 +147,7 @@ function Index() {
                         }}
                         className="mt-4 swiper position-relative"
                     >
-                        {Products.filter(product => product.id >= 5 && product.id <= 10).map(product => (
+                        {Products.filter(product => product.id >= 1 && product.id <= 10).map(product => (
                             <SwiperSlide key={product.id}>
                                 <div className="product-item text-center position-relative">
                                     <Link to={`/product/${product.id}`} className="text-decoration-none text-black">
@@ -175,14 +184,24 @@ function Index() {
                                     </Link>
 
                                     <Link to={`/product/${product.id}`} className="text-decoration-none text-black">
-                                        <div className="product-content pt-3">
-                                            <span className="price text-decoration-none">{product.price}</span>
-                                            <h3 className="title pt-1">{product.productName}</h3>
+                                        <div className="price-section d-flex gap-3 justify-content-center align-items-center pt-2 mb-2">
+                                            {product.oldprice && (
+                                                <span className="old-price text-decoration-line-through text-muted ms-2">
+                                                    {product.oldprice}
+                                                </span>
+                                            )}
+                                            <span className="current-price fw-bold" style={{ fontSize: '24px', color: '#4e7661' }}>
+                                                {product.price}
+                                            </span>
                                         </div>
+                                        <h3 className="title" style={{ fontSize: '22px' }}>{product.productName}</h3>
                                     </Link>
                                 </div>
                             </SwiperSlide>
                         ))}
+                        <div className="text-center mt-4 ">
+                            <Link to='/products' className="btn rounded-0 px-4 py-2">VIEW ALL</Link>
+                        </div>
                     </Swiper>
                 </div>
             </div>
@@ -190,21 +209,21 @@ function Index() {
             {/* Banner */}
             <div className="banners py-5">
                 <div className="container">
-                    <div className="row">
-                        <div className="col-lg-6 banner-card overflow-hidden position-relative">
-                            <img src={subBanner1} alt="" className="img-fluid rounded banner-img" />
-                            <div className="banner-content position-absolute">
-                                <h3>NEW COLLECTION</h3>
-                                <h1>Intensive Glow C+ <br />Serum <br /> </h1>
-                                <button className="btn banner-btn mt-2">EXPLORE MORE</button>
+                    <div className="row g-5">
+                        <div className="col-md-6 discover-card text-center">
+                            <div className="discover-img section-image rounded">
+                                <img src='/src/assets2/mc-banner-1.png' alt="Winter Collection" className="img-fluid rounded" />
+                            </div>
+                            <div className="discover-info mt-3">
+                                <Link to='/products' className="btn mt-2">Explore Now <i className="bi bi-arrow-right ms-2"></i></Link>
                             </div>
                         </div>
-                        <div className="col-lg-6 banner-card1 overflow-hidden position-relative">
-                            <img src={subBanner2} alt="" className="img-fluid rounded banner-img" />
-                            <div className="banner-content position-absolute">
-                                <h1>25% off Everything</h1>
-                                <p>Makeup with extended range in <br />colors for every human.</p>
-                                <button className="btn banner-btn mt-2">SHOP NOW</button>
+                        <div className="col-md-6 discover-card text-center">
+                            <div className="discover-img section-image rounded">
+                                <img src='/src/assets2/mc-banner-3.png' alt="Summer Collection" className="img-fluid rounded" />
+                            </div>
+                            <div className="discover-info mt-3">
+                                <Link to='/cart' className="btn mt-2">Buy Now <i className="bi bi-arrow-right ms-2"></i></Link>
                             </div>
                         </div>
                     </div>
@@ -212,51 +231,42 @@ function Index() {
             </div>
 
             {/* Service */}
-            <div className="container py-5 my-5">
-                <div className="row text-center">
-                    <div className="col-lg-3 col-sm-6 mb-4">
-                        <img src={serviceImg1} alt="" className="img-fluid" />
-                        <h4 className="mt-3 mb-1">Free Shipping</h4>
-                        <p className="text-muted fs-6 fw-semibold">Free Shipping for orders over $100.</p>
-                    </div>
-                    <div className="col-lg-3 col-sm-6 mb-4">
-                        <img src={serviceImg2} alt="" className="img-fluid" />
-                        <h4 className="mt-3 mb-1">Returns</h4>
-                        <p className="text-muted fs-6 fw-semibold">Within 48hrs after cancellation.</p>
-                    </div>
-                    <div className="col-lg-3 col-sm-6 mb-4">
-                        <img src={serviceImg3} alt="" className="img-fluid" />
-                        <h4 className="mt-3 mb-1">Online Support</h4>
-                        <p className="text-muted fs-6 fw-semibold">24 hours Online Support, Contact anytime.</p>
-                    </div>
-                    <div className="col-lg-3 col-sm-6 mb-4">
-                        <img src={serviceImg1} alt="" className="img-fluid" />
-                        <h4 className="mt-3 mb-1">Flexible Payment</h4>
-                        <p className="text-muted fs-6 fw-semibold">Pay with Multiple payment Methods</p>
+            <div className="service-section" style={{ backgroundColor: '#EDF1F0' }}>
+                <div className="container py-5 my-5" >
+                    <div className="row text-center">
+                        <div className="col-lg-3 col-sm-6 mb-4">
+                            <img src={serviceImg1} alt="" className="img-fluid2" />
+                            <h4 className="mt-3 mb-1">Free Shipping</h4>
+                            <p className="text-muted fs-6 fw-semibold">Free Shipping for orders over $100.</p>
+                        </div>
+                        <div className="col-lg-3 col-sm-6 mb-4">
+                            <img src={serviceImg2} alt="" className="img-fluid2" />
+                            <h4 className="mt-3 mb-1">Returns</h4>
+                            <p className="text-muted fs-6 fw-semibold">Within 48hrs after cancellation.</p>
+                        </div>
+                        <div className="col-lg-3 col-sm-6 mb-4">
+                            <img src={serviceImg3} alt="" className="img-fluid2" />
+                            <h4 className="mt-3 mb-1">Online Support</h4>
+                            <p className="text-muted fs-6 fw-semibold">24 hours Online Support, Contact anytime.</p>
+                        </div>
+                        <div className="col-lg-3 col-sm-6 mb-4">
+                            <img src={serviceImg1} alt="" className="img-fluid2" />
+                            <h4 className="mt-3 mb-1">Flexible Payment</h4>
+                            <p className="text-muted fs-6 fw-semibold">Pay with Multiple payment Methods</p>
+                        </div>
                     </div>
                 </div>
             </div>
 
             {/* seen in */}
-            <div className="text-center my-5 seen-in">
-                <div className="container">
-                    <h1 className="mb-5 fw-semibold">As seen in</h1>
-                    <div className="row pt-3 justify-content-center">
-                        <div className="col-md-4 mb-4 seen-card">
-                            <img src={brand1} alt="" className="img-fluid" />
-                            <p className="text-dark fs-5 mt-2 fw-semibold">"Also the customer service is phenoinal. I would purchase again".</p>
-                        </div>
-                        <div className="col-md-4 mb-4 seen-card">
-                            <img src={brand2} alt="" className="img-fluid" />
-                            <p className="text-dark fs-5 mt-2 fw-semibold">"Great Product line. very attractive staff to deal with".</p>
-                        </div>
-                        <div className="col-md-4 mb-4 seen-card">
-                            <img src={brand3} alt="" className="img-fluid" />
-                            <p className="text-dark fs-5 mt-2 fw-semibold">"Are you looking to your beauty at an affordable price? Look no further".</p>
-                        </div>
-                    </div>
+            <div className="text-center p-0 m-0 seen-in" style={{ backgroundColor: '#fff' }}>
+                <div className="section-title mb-5 product-title text-center">
+                    <h2 className="fw-semibold fs-1">AI Skin Analysis</h2>
+                    <p>Confused about where to start your skincare journey? We've got you covered.</p>
                 </div>
+                <img src='/src/assets2/mc-hero2.jpg' alt="" className="img-fluid" />
             </div>
+
 
             {/* favourite */}
             <div className="favourite-beauty py-5 my-5">
@@ -270,19 +280,21 @@ function Index() {
 
                     <div className="row">
                         <div className="col-lg-5">
-                            <div className="favourite-beauty-banner mb-lg-0 mb-5 position-relative">
-                                <img src={femalebanner} className="img-fluid" alt="" />
-                                <div className="favourite-beauty-banner-title">
-                                    <h3 className="fs-2">Empower Yourself</h3>
-                                    <p className="fs-6">Get the skin you want to feel</p>
-                                    <button className="btn btn-default">Explore More</button>
+                            <div className="favourite-card">
+                                <div className="favourite-beauty-banner mb-lg-0 mb-5 position-relative">
+                                    <img src='./src/assets2/mc-favourite1.png' className="img-fluid" alt="" />
+                                </div>
+                                <div className="discover-info mt-3">
+                                    <h3 className="fs-1">Empower Yourself</h3>
+                                    <p className="fs-4">Get the skin you want to feel</p>
+                                    <Link to='/products' className="btn mt-2">Explore Now <i className="bi bi-arrow-right ms-2"></i></Link>
                                 </div>
                             </div>
                         </div>
 
                         <div className="col-lg-7">
                             <div className="row">
-                                {Products.filter(product => product.id >= 10 && product.id <= 15).map(product => (
+                                {Products.filter(product => product.id >= 1 && product.id <= 9).map(product => (
                                     <div className="col-md-6 col-lg-4 mb-4" key={product.id}>
                                         <div className="product-item text-center position-relative">
                                             <Link to={`/product/${product.id}`} className="text-decoration-none text-black">
@@ -319,10 +331,17 @@ function Index() {
                                             </Link>
 
                                             <Link to={`/product/${product.id}`} className="text-decoration-none text-black">
-                                                <div className="product-content pt-3">
-                                                    <span className="price">{product.price}</span>
-                                                    <h3 className="title pt-1">{product.productName}</h3>
+                                                <div className="price-section d-flex gap-3 justify-content-center align-items-center pt-2 mb-2">
+                                                    {product.oldprice && (
+                                                        <span className="old-price text-decoration-line-through text-muted ms-2">
+                                                            {product.oldprice}
+                                                        </span>
+                                                    )}
+                                                    <span className="current-price fw-bold" style={{ fontSize: '16px', color: '#4e7661' }}>
+                                                        {product.price}
+                                                    </span>
                                                 </div>
+                                                <h3 className="title" style={{ fontSize: '20px' }}>{product.productName}</h3>
                                             </Link>
                                         </div>
                                     </div>
@@ -342,16 +361,16 @@ function Index() {
                 <div className="row g-5">
                     <div className="col-md-6 discover-card text-center">
                         <div className="discover-img section-image rounded">
-                            <img src={discover1} alt="Summer Collection" className="img-fluid rounded" />
+                            <img src='/src/assets2/mc-discover1.png' alt="Winter Collection" className="img-fluid rounded" />
                         </div>
                         <div className="discover-info mt-3">
-                            <div>Summer Collection</div>
+                            <div>Winter Collection</div>
                             <button className="btn mt-2">Shop Now <i className="bi bi-arrow-right ms-2"></i></button>
                         </div>
                     </div>
                     <div className="col-md-6 discover-card text-center">
                         <div className="discover-img section-image rounded">
-                            <img src={discover2} alt="From our Blog" className="img-fluid rounded" />
+                            <img src='/src/assets2/mc-discover3.png' alt="Summer Collection" className="img-fluid rounded" />
                         </div>
                         <div className="discover-info mt-3">
                             <div>Summer Collection</div>
@@ -366,38 +385,43 @@ function Index() {
                 <div className="row g-4">
                     <div className="col-lg-2 col-md-4">
                         <div className="social-wrapper position-relative overflow-hidden">
-                            <img src={socialImage1} alt="" className="img-fluid" />
-                            <i className="bi bi-instagram"></i>
+                            <img src='/src/assets2/mc-product-1f.png' alt="" className="img-fluid" />
+                            <a href="https://www.instagram.com/mensco.in/"><i className="bi bi-instagram"></i></a>
                         </div>
                     </div>
                     <div className="col-lg-2 col-md-4">
                         <div className="social-wrapper position-relative overflow-hidden">
-                            <img src={socialImage2} alt="" className="img-fluid" />
-                            <i className="bi bi-instagram"></i>
+                            <img src='/src/assets2/mc-product-2f.png' alt="" className="img-fluid" />
+                            <a href="https://www.instagram.com/mensco.in/"><i className="bi bi-instagram"></i></a>
+
                         </div>
                     </div>
                     <div className="col-lg-2 col-md-4">
                         <div className="social-wrapper position-relative overflow-hidden">
-                            <img src={socialImage3} alt="" className="img-fluid" />
-                            <i className="bi bi-instagram"></i>
+                            <img src='/src/assets2/mc-product-3f.png' alt="" className="img-fluid" />
+                            <a href="https://www.instagram.com/mensco.in/"><i className="bi bi-instagram"></i></a>
+
                         </div>
                     </div>
                     <div className="col-lg-2 col-md-4">
                         <div className="social-wrapper position-relative overflow-hidden">
-                            <img src={socialImage4} alt="" className="img-fluid" />
-                            <i className="bi bi-instagram"></i>
+                            <img src='/src/assets2/mc-product-4f.png' alt="" className="img-fluid" />
+                            <a href="https://www.instagram.com/mensco.in/"><i className="bi bi-instagram"></i></a>
+
                         </div>
                     </div>
                     <div className="col-lg-2 col-md-4">
                         <div className="social-wrapper position-relative overflow-hidden">
-                            <img src={socialImage5} alt="" className="img-fluid" />
-                            <i className="bi bi-instagram"></i>
+                            <img src='/src/assets2/mc-product-5f.png' alt="" className="img-fluid" />
+                            <a href="https://www.instagram.com/mensco.in/"><i className="bi bi-instagram"></i></a>
+
                         </div>
                     </div>
                     <div className="col-lg-2 col-md-4">
                         <div className="social-wrapper position-relative overflow-hidden">
-                            <img src={socialImage1} alt="" className="img-fluid" />
-                            <i className="bi bi-instagram"></i>
+                            <img src='/src/assets2/mc-product-6f.png' alt="" className="img-fluid" />
+                            <a href="https://www.instagram.com/mensco.in/"><i className="bi bi-instagram"></i></a>
+
                         </div>
                     </div>
                 </div>

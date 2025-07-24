@@ -88,8 +88,8 @@ function Products() {
                                 <option value="all">All Product</option>
                                 <option value="new">New Product</option>
                                 <option value="sale">Sale Products</option>
-                                <option value="low">Price: Low to High</option>
-                                <option value="high">Price: High to Low</option>
+                                {/* <option value="low">Price: Low to High</option>
+                                <option value="high">Price: High to Low</option> */}
                             </select>
                         </div>
                     </div>

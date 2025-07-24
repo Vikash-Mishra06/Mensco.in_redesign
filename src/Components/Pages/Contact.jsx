@@ -1,48 +1,103 @@
-import React from 'react';
+import React from "react";
 
 function Contact() {
   return (
-    <section className="contact-section py-5">
-      <div className="container">
-        <h2 className="text-center fw-bold mb-4">Keep in Touch With Us</h2>
-        <p className="text-center text-muted mb-5">
-          Be the first to know about new skincare launches, exclusive offers, and expert beauty tips.
-        </p>
+    <div className="container py-5 mt-5">
+      <h1 className="text-center fw-bold mb-4" style={{ fontSize: "2.5rem" }}>
+        Contact us
+      </h1>
 
-        <div className="row justify-content-center mb-5">
-          <div className="col-md-6">
-            <div className="border rounded p-4 bg-white shadow-sm">
-              <h5 className="fw-semibold mb-3">Contact Information</h5>
-              <p className="mb-2"><strong>Mobile:</strong> +91 88665 54411</p>
-              <p className="mb-2"><strong>Hotline:</strong> 1800 123 4567</p>
-              <p className="mb-0"><strong>Email:</strong> hello@example.com</p>
-            </div>
-          </div>
+      <ul className="mb-5" style={{ lineHeight: "2rem", fontSize: "1rem" }}>
+        <li>
+          <strong>WE LOVE TO HEAR FROM YOU & INTERACT WITH YOU.</strong>
+        </li>
+        
+        <li>
+          We’re here to listen, assist, and elevate your shopping experience to new heights.
+        </li>
+        <li>
+          Need assistance or have any feedback, review, or ideas of inspiration to share? We’re just a message away.
+        </li>
+        
+        <li>
+          With MENSCO, every touchpoint is an opportunity to show our commitment to you.
+        </li>
+        <li>
+          Join us on this journey, where your input shapes our innovation, and together, we step beyond the conventional to create something extraordinary.
+        </li>
+        <br />
+        <ul className="fs-4 fw-semibold m-0 p-0" >
+        <li>
+          <span style={{color: '#4e7661'}}>WhatsApp at:</span> +91 18002022558
+        </li>
+        <li>
+          <span style={{color: '#4e7661'}}>Email at:</span> mensco@example.com
+        </li>
+        </ul>
+      </ul>
+
+      <div className="row align-items-center g-5">
+        
+        <div className="col-md-6">
+          <img
+            src="/src/assets2/mc-banner-1.png"
+            alt="contact art"
+            className="img-fluid rounded"
+          />
         </div>
 
-        {/* Optional: Contact form */}
-        <div className="row justify-content-center">
-          <div className="col-md-8">
-            <form className="p-4 bg-white border rounded shadow-sm">
-              <h5 className="fw-semibold mb-4">Send us a message</h5>
-              <div className="mb-3">
-                <label className="form-label">Name</label>
-                <input type="text" className="form-control" placeholder="Your Name" />
+        <div className="col-md-6">
+          <h3 className="fw-semibold mb-3">Contact <em>form</em></h3>
+          <form>
+            <div className="row g-3">
+              <div className="col-md-6">
+                <input
+                  type="text"
+                  placeholder="First name"
+                  className="form-control rounded-3"
+                />
               </div>
-              <div className="mb-3">
-                <label className="form-label">Email</label>
-                <input type="email" className="form-control" placeholder="Your Email" />
+              <div className="col-md-6">
+                <input
+                  type="text"
+                  placeholder="Last name"
+                  className="form-control rounded-3"
+                />
               </div>
-              <div className="mb-3">
-                <label className="form-label">Message</label>
-                <textarea className="form-control" rows="4" placeholder="Write your message..."></textarea>
+              <div className="col-md-6">
+                <input
+                  type="email"
+                  placeholder="email@example.com"
+                  className="form-control rounded-3"
+                />
               </div>
-              <button type="submit" className="btn btn-dark px-4">Send Message</button>
-            </form>
-          </div>
+              <div className="col-md-6">
+                <input
+                  type="text"
+                  placeholder="Phone"
+                  className="form-control rounded-3"
+                />
+              </div>
+              <div className="col-12">
+                <textarea
+                  rows="4"
+                  placeholder="Comment"
+                  className="form-control rounded-3"
+                ></textarea>
+              </div>
+              <div className="col-12">
+                <button
+                  type="submit"
+                  className="btn btn-dark px-4 py-2 rounded-pill"
+                >
+                  ⬤ Send
+                </button>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
 

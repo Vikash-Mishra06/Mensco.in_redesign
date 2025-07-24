@@ -124,16 +124,16 @@ function ProductDetails() {
                 )}
               </div>
 
-              <p className="mb-4" style={{ fontSize: '16px', color: '#666' }}>
+              <p className="mb-4 fw-semibold" style={{ fontSize: '16px', color: '#666' }}>
                 {product.description || "Premium quality product with excellent features."}
               </p>
 
               <div className="quantity-selector mb-4">
                 <div className="d-flex align-items-center">
-                  <label className="me-3 fw-semibold" style={{ fontSize: '16px' }}>Quantity:</label>
+                  <label className="me-3 fw-bold" style={{ fontSize: '16px' }}>Quantity:</label>
                   <div className="d-flex align-items-center">
                     <button 
-                      className="btn-count Quantity-box border-0"
+                      className="btn1 btn-dark btn-sm px-2 py-1"
                       onClick={() => setQuantity(Math.max(1, quantity - 1))}
                       style={{ fontSize: '20px', padding: '0 10px' }}
                     >
@@ -155,7 +155,7 @@ function ProductDetails() {
                       }}
                     />
                     <button 
-                      className="btn-count Quantity-box border-0"
+                      className="btn1 btn-dark btn-sm px-2 py-1"
                       onClick={() => setQuantity(quantity + 1)}
                       style={{ fontSize: '20px', padding: '0 10px' }}
                     >
@@ -165,7 +165,7 @@ function ProductDetails() {
                 </div>
               </div>
 
-              <div className="button-group d-flex gap-3 mb-4">
+              <div className="button-group d-flex gap-4 mb-3">
                 <button 
                   className="btn-custome2 w-100 border-0"
                   onClick={() => addToCart(product)}
@@ -199,16 +199,16 @@ function ProductDetails() {
               </div>
               <div className="product-meta">
                 <div className="d-flex mb-2">
-                  <span className="text-muted me-2" style={{ width: '120px', fontSize: '14px' }}>SKU:</span>
+                  <span className="text-muted me-2 fw-semibold" style={{ width: '120px', fontSize: '14px' }}>SKU:</span>
                   <span style={{ fontSize: '14px' }}>BEAU-{product.id}</span>
                 </div>
                 <div className="d-flex mb-2">
-                  <span className="text-muted me-2" style={{ width: '120px', fontSize: '14px' }}>Category:</span>
+                  <span className="text-muted me-2 fw-semibold" style={{ width: '120px', fontSize: '14px' }}>Category:</span>
                   <span style={{ fontSize: '14px' }}>Beauty & Cosmetics</span>
                 </div>
                 <div className="d-flex">
-                  <span className="text-muted me-2" style={{ width: '120px', fontSize: '14px' }}>Availability:</span>
-                  <span className="text-success" style={{ fontSize: '14px' }}>In Stock</span>
+                  <span className="text-muted me-2 fw-semibold" style={{ width: '120px', fontSize: '14px' }}>Availability:</span>
+                  <span className="text-success fw-semibold" style={{ fontSize: '16px' }}>In Stock</span>
                 </div>
               </div>
             </div>
@@ -240,7 +240,7 @@ function ProductDetails() {
 
           <div className="tab-content">
             {activeTab === 'description' && (
-              <div className="tab-pane fade show active px-3">
+              <div className="tab-pane fade show active px-3 fw-semibold">
                 <p className="mb-2"><strong style={{ fontSize: '16px' }}>For Normal, Oily, Combined Skin Types</strong></p>
                 <p className="mb-3" style={{ fontSize: '15px', color: '#666' }}>
                   Complexion-perfecting natural foundation enriched with antioxidant-packed superfruits and vitamins.
@@ -272,7 +272,7 @@ function ProductDetails() {
             )}
 
             {activeTab === 'shipping' && (
-              <div className="tab-pane fade show active px-3">
+              <div className="tab-pane fade show active px-3 fw-semibold">
                 <div className="mb-4">
                   <h5 className="mb-3" style={{ fontSize: '18px', fontWeight: '600' }}>Shipping Policy</h5>
                   <p style={{ fontSize: '15px', color: '#666' }}>
