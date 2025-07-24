@@ -42,7 +42,7 @@ function Products() {
             window.dispatchEvent(new Event('wishlistUpdated'));
             toast.success(`${product.productName} added to Wishlist`);
         } else {
-            toast.info(`${product.productName} is already in Wishlist`);
+            toast.info(<div className="shake">{`${product.productName} is Already in Wishlist`}</div>);
         }
     };
 
@@ -57,7 +57,7 @@ function Products() {
             window.dispatchEvent(new Event('cartUpdated'));
             toast.success(`${product.productName} added to Cart`);
         } else {
-            toast.info(`${product.productName} is already in Cart`);
+            toast.info(<div className="shake">{`${product.productName} is Already in Cart!`}</div>);
         }
     };
 

@@ -50,7 +50,7 @@ function Index() {
             window.dispatchEvent(new Event('wishlistUpdated'))
             toast.success(`${product.productName} Added to Wishlist`)
         } else {
-            toast.info(`${product.productName} is Already in Wishlist`)
+            toast.info(<div className="shake">{`${product.productName} is Already in Wishlist`}</div>)
         }
     }
 
@@ -64,14 +64,14 @@ function Index() {
             window.dispatchEvent(new Event('cartUpdated'))
             toast.success(`${product.productName} Added to Cart!`)
         } else {
-            toast.info(`${product.productName} is Already in Cart!`)
+            toast.info(<div className="shake">{`${product.productName} is Already in Cart!`}</div>);
         }
     }
 
     return (
         <>
             {/* hero */}
-            <div className="hero">
+            <div className="hero fade-in">
                 <Swiper
                     slidesPerView={1}
                     spaceBetween={0}
@@ -91,7 +91,7 @@ function Index() {
                     <SwiperSlide>
                         <div className="hero-wrap hero-wrap2">
                             <div className="hero-content">
-                                 <Link to="/cart" className="btn hero-btn mt-3">Shop Now</Link>
+                                <Link to="/cart" className="btn hero-btn mt-3">Shop Now</Link>
                             </div>
                         </div>
                     </SwiperSlide>
@@ -120,9 +120,8 @@ function Index() {
                 </Swiper>
             </div>
 
-
             {/* Products  */}
-            <div className="product-container py-5 my-3">
+            <div className="product-container py-5 my-3 slide-in">
                 <div className="container position-relative">
                     <div className="row">
                         <div className="section-title mb-2 product-title text-center">
@@ -131,10 +130,16 @@ function Index() {
                         </div>
                     </div>
 
+                    
                     <Swiper
                         slidesPerView={4}
                         spaceBetween={20}
-
+                        autoplay={{
+                            delay: 3000, // 3 seconds between slides
+                            disableOnInteraction: false, // continue autoplay after user interaction
+                            pauseOnMouseEnter: true, // pause when mouse hovers over slider
+                        }}
+                        modules={[Autoplay]}
                         navigation={{ nextEl: ".product-swiper-next", prevEl: ".product-swiper-prev" }}
                         breakpoints={{
                             1399: { slidesPerView: 4 },
@@ -198,7 +203,7 @@ function Index() {
                             </SwiperSlide>
                         ))}
                         <div className="text-center mt-4 ">
-                            <Link to='/products' className="btn rounded-0 px-4 py-2">VIEW ALL</Link>
+                            <Link to='/products' className="btn pulse">View All<i className="bi bi-arrow-right ms-2"></i></Link>
                         </div>
                     </Swiper>
                 </div>
@@ -213,7 +218,7 @@ function Index() {
                                 <img src={subBanner1} alt="Winter Collection" className="img-fluid rounded" />
                             </div>
                             <div className="discover-info mt-3">
-                                <Link to='/products' className="btn mt-2">Explore Now <i className="bi bi-arrow-right ms-2"></i></Link>
+                                <Link to='/products' className="btn mt-2 pulse">Explore Now <i className="bi bi-arrow-right ms-2"></i></Link>
                             </div>
                         </div>
                         <div className="col-md-6 discover-card text-center">
@@ -221,7 +226,7 @@ function Index() {
                                 <img src={subBanner2} alt="Summer Collection" className="img-fluid rounded" />
                             </div>
                             <div className="discover-info mt-3">
-                                <Link to='/cart' className="btn mt-2">Buy Now <i className="bi bi-arrow-right ms-2"></i></Link>
+                                <Link to='/cart' className="btn mt-2 pulse">Buy Now <i className="bi bi-arrow-right ms-2"></i></Link>
                             </div>
                         </div>
                     </div>
@@ -232,22 +237,22 @@ function Index() {
             <div className="service-section" style={{ backgroundColor: '#EDF1F0' }}>
                 <div className="container py-5 my-5" >
                     <div className="row text-center">
-                        <div className="col-lg-3 col-sm-6 mb-4">
+                        <div className="col-lg-3 col-sm-6 mb-4 fade-in" style={{ animationDelay: '0.3s' }}>
                             <img src={serviceImg1} alt="" className="img-fluid2" />
-                            <h4 className="mt-3 mb-1">Free Shipping</h4>
+                            <h4 className="mt-3 mb-1 ">Free Shipping</h4>
                             <p className="text-muted fs-6 fw-semibold">Free Shipping for orders over $100.</p>
                         </div>
-                        <div className="col-lg-3 col-sm-6 mb-4">
+                        <div className="col-lg-3 col-sm-6 mb-4 fade-in" style={{ animationDelay: '0.3s' }}>
                             <img src={serviceImg2} alt="" className="img-fluid2" />
                             <h4 className="mt-3 mb-1">Returns</h4>
                             <p className="text-muted fs-6 fw-semibold">Within 48hrs after cancellation.</p>
                         </div>
-                        <div className="col-lg-3 col-sm-6 mb-4">
+                        <div className="col-lg-3 col-sm-6 mb-4 fade-in" style={{ animationDelay: '0.3s' }}>
                             <img src={serviceImg3} alt="" className="img-fluid2" />
                             <h4 className="mt-3 mb-1">Online Support</h4>
                             <p className="text-muted fs-6 fw-semibold">24 hours Online Support, Contact anytime.</p>
                         </div>
-                        <div className="col-lg-3 col-sm-6 mb-4">
+                        <div className="col-lg-3 col-sm-6 mb-4 fade-in" style={{ animationDelay: '0.3s' }}>
                             <img src={serviceImg4} alt="" className="img-fluid2" />
                             <h4 className="mt-3 mb-1">Flexible Payment</h4>
                             <p className="text-muted fs-6 fw-semibold">Pay with Multiple payment Methods</p>
@@ -262,23 +267,22 @@ function Index() {
                     <h2 className="fw-semibold fs-1">AI Skin Analysis</h2>
                     <p>Confused about where to start your skincare journey? We've got you covered.</p>
                 </div>
-                <img src={aibanner} alt="" className="img-fluid" />
+                <img src={aibanner} alt="" className="img-fluid float" />
             </div>
-
 
             {/* favourite */}
             <div className="favourite-beauty py-5 my-5">
                 <div className="container">
                     <div className="row">
                         <div className="section-title mb-5 product-title text-center">
-                            <h2 className="fw-semibold fs-1">Customer favourite essentials</h2>
+                            <h2 className="fw-semibold fs-1 bounce">Customer favourite essentials</h2>
                             <p>Our product are designed beautifully and also affordable for everyone.</p>
                         </div>
                     </div>
 
                     <div className="row">
                         <div className="col-lg-5">
-                            <div className="favourite-card">
+                            <div className="favourite-card ">
                                 <div className="favourite-beauty-banner mb-lg-0 mb-2 position-relative">
                                     <img src={favourite1} className="img-fluid" alt="" />
                                 </div>
@@ -357,7 +361,7 @@ function Index() {
                     <p className="text-center">Our bundles were designed to conveniently package <br />your tanning essentials while saving your money</p>
                 </div>
                 <div className="row g-5">
-                    <div className="col-md-6 discover-card text-center">
+                    <div className="col-md-6 discover-card text-center" >
                         <div className="discover-img section-image rounded">
                             <img src={discover1} alt="Winter Collection" className="img-fluid rounded" />
                         </div>
@@ -366,7 +370,7 @@ function Index() {
                             <Link to='/sale' className="btn mt-2">Shop Now <i className="bi bi-arrow-right ms-2"></i></Link>
                         </div>
                     </div>
-                    <div className="col-md-6 discover-card text-center">
+                    <div className="col-md-6 discover-card text-center" >
                         <div className="discover-img section-image rounded">
                             <img src={discover2} alt="Summer Collection" className="img-fluid rounded" />
                         </div>
