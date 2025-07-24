@@ -1,8 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+
 import head from '../../assets/about-head-shape.webp';
-import about1 from './../../assets/banner-female-2.webp';
-import about2 from './../../assets/discover-1.webp';
+import about1 from '/Images/mc-banner-1.png'
+import about2 from '/Images/mc-banner-2.png'
 import team1 from '../../assets/team-1.webp';
 import team2 from '../../assets/team-2.webp';
 import team3 from '../../assets/team-3.webp';
@@ -108,7 +109,7 @@ function About() {
                         <motion.div className="col-md-6" variants={itemVariants}>
                             <div className="about-img-container rounded overflow-hidden shadow-lg">
                                 <img 
-                                    src='/src/assets2/mc-banner-1.png'
+                                    src={about1}
                                     alt="Our Beginnings" 
                                     className="img-fluid w-100 hover-zoom"
                                 />
@@ -149,7 +150,7 @@ function About() {
                         <motion.div className="col-md-6" variants={itemVariants}>
                             <div className="about-img-container rounded overflow-hidden shadow-lg">
                                 <img 
-                                    src='/src/assets2/mc-banner-1.png'
+                                    src={about2}
                                     alt="Our Mission" 
                                     className="img-fluid w-100 hover-zoom"
                                 />

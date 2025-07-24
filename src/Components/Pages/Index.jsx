@@ -11,28 +11,32 @@ import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/ReactToastify.css'
 
-import subBanner1 from '../../assets/banner-1.webp'
-import subBanner2 from '../../assets/banner-2.webp'
+import subBanner1 from '/Images/mc-banner-1.png'
+import subBanner2 from '/Images/mc-banner-3.png'
+
+import favourite1 from '/Images/mc-favourite1.png'
+
+
 
 import serviceImg1 from './../../assets/service-icon-1.svg'
 import serviceImg2 from './../../assets/service-icon-2.svg'
 import serviceImg3 from './../../assets/service-icon-3.svg'
 import serviceImg4 from './../../assets/service-icon-4.svg'
 
-import brand1 from './../../assets/brand-1.png'
-import brand2 from './../../assets/brand-2.png'
-import brand3 from './../../assets/brand-3.png'
+import aibanner from '/Images/Mc-hero2.jpg'
 
-import femalebanner from './../../assets/banner-female.webp';
 
-import discover1 from '../../assets/discover-1.webp'
-import discover2 from '../../assets/discover-2.webp'
+import discover1 from '/Images/mc-discover1.png'
+import discover2 from '/Images/mc-discover3.png'
 
-import socialImage1 from './../../assets/social-image-1.jpg'
-import socialImage2 from './../../assets/social-image-2.jpg'
-import socialImage3 from './../../assets/social-image-3.jpg'
-import socialImage4 from './../../assets/social-image-4.jpg'
-import socialImage5 from './../../assets/social-image-5.jpg'
+
+import socialImage1 from '/Images/mc-product-1f.png'
+import socialImage2 from '/Images/mc-product-2f.png'
+import socialImage3 from '/Images/mc-product-3f.png'
+import socialImage4 from '/Images/mc-product-4f.png'
+import socialImage5 from '/Images/mc-product-5f.png'
+import socialImage6 from '/Images/mc-product-6f.png'
+
 
 
 
@@ -212,7 +216,7 @@ function Index() {
                     <div className="row g-5">
                         <div className="col-md-6 discover-card text-center">
                             <div className="discover-img section-image rounded">
-                                <img src='/src/assets2/mc-banner-1.png' alt="Winter Collection" className="img-fluid rounded" />
+                                <img src={subBanner1} alt="Winter Collection" className="img-fluid rounded" />
                             </div>
                             <div className="discover-info mt-3">
                                 <Link to='/products' className="btn mt-2">Explore Now <i className="bi bi-arrow-right ms-2"></i></Link>
@@ -220,7 +224,7 @@ function Index() {
                         </div>
                         <div className="col-md-6 discover-card text-center">
                             <div className="discover-img section-image rounded">
-                                <img src='/src/assets2/mc-banner-3.png' alt="Summer Collection" className="img-fluid rounded" />
+                                <img src={subBanner2} alt="Summer Collection" className="img-fluid rounded" />
                             </div>
                             <div className="discover-info mt-3">
                                 <Link to='/cart' className="btn mt-2">Buy Now <i className="bi bi-arrow-right ms-2"></i></Link>
@@ -250,7 +254,7 @@ function Index() {
                             <p className="text-muted fs-6 fw-semibold">24 hours Online Support, Contact anytime.</p>
                         </div>
                         <div className="col-lg-3 col-sm-6 mb-4">
-                            <img src={serviceImg1} alt="" className="img-fluid2" />
+                            <img src={serviceImg4} alt="" className="img-fluid2" />
                             <h4 className="mt-3 mb-1">Flexible Payment</h4>
                             <p className="text-muted fs-6 fw-semibold">Pay with Multiple payment Methods</p>
                         </div>
@@ -264,7 +268,7 @@ function Index() {
                     <h2 className="fw-semibold fs-1">AI Skin Analysis</h2>
                     <p>Confused about where to start your skincare journey? We've got you covered.</p>
                 </div>
-                <img src='/src/assets2/mc-hero2.jpg' alt="" className="img-fluid" />
+                <img src={aibanner} alt="" className="img-fluid" />
             </div>
 
 
@@ -282,7 +286,7 @@ function Index() {
                         <div className="col-lg-5">
                             <div className="favourite-card">
                                 <div className="favourite-beauty-banner mb-lg-0 mb-5 position-relative">
-                                    <img src='./src/assets2/mc-favourite1.png' className="img-fluid" alt="" />
+                                    <img src={favourite1} className="img-fluid" alt="" />
                                 </div>
                                 <div className="discover-info mt-3">
                                     <h3 className="fs-1">Empower Yourself</h3>
@@ -361,20 +365,20 @@ function Index() {
                 <div className="row g-5">
                     <div className="col-md-6 discover-card text-center">
                         <div className="discover-img section-image rounded">
-                            <img src='/src/assets2/mc-discover1.png' alt="Winter Collection" className="img-fluid rounded" />
+                            <img src={discover1} alt="Winter Collection" className="img-fluid rounded" />
                         </div>
                         <div className="discover-info mt-3">
                             <div>Winter Collection</div>
-                            <button className="btn mt-2">Shop Now <i className="bi bi-arrow-right ms-2"></i></button>
+                            <Link to='/sale' className="btn mt-2">Shop Now <i className="bi bi-arrow-right ms-2"></i></Link>
                         </div>
                     </div>
                     <div className="col-md-6 discover-card text-center">
                         <div className="discover-img section-image rounded">
-                            <img src='/src/assets2/mc-discover3.png' alt="Summer Collection" className="img-fluid rounded" />
+                            <img src={discover2} alt="Summer Collection" className="img-fluid rounded" />
                         </div>
                         <div className="discover-info mt-3">
                             <div>Summer Collection</div>
-                            <button className="btn mt-2">Read More <i className="bi bi-arrow-right ms-2"></i></button>
+                            <Link to='/products' className="btn mt-2">Read More <i className="bi bi-arrow-right ms-2"></i></Link>
                         </div>
                     </div>
                 </div>
@@ -385,41 +389,41 @@ function Index() {
                 <div className="row g-4">
                     <div className="col-lg-2 col-md-4">
                         <div className="social-wrapper position-relative overflow-hidden">
-                            <img src='/src/assets2/mc-product-1f.png' alt="" className="img-fluid" />
+                            <img src={socialImage1} alt="" className="img-fluid" />
                             <a href="https://www.instagram.com/mensco.in/"><i className="bi bi-instagram"></i></a>
                         </div>
                     </div>
                     <div className="col-lg-2 col-md-4">
                         <div className="social-wrapper position-relative overflow-hidden">
-                            <img src='/src/assets2/mc-product-2f.png' alt="" className="img-fluid" />
-                            <a href="https://www.instagram.com/mensco.in/"><i className="bi bi-instagram"></i></a>
-
-                        </div>
-                    </div>
-                    <div className="col-lg-2 col-md-4">
-                        <div className="social-wrapper position-relative overflow-hidden">
-                            <img src='/src/assets2/mc-product-3f.png' alt="" className="img-fluid" />
+                            <img src={socialImage2} alt="" className="img-fluid" />
                             <a href="https://www.instagram.com/mensco.in/"><i className="bi bi-instagram"></i></a>
 
                         </div>
                     </div>
                     <div className="col-lg-2 col-md-4">
                         <div className="social-wrapper position-relative overflow-hidden">
-                            <img src='/src/assets2/mc-product-4f.png' alt="" className="img-fluid" />
+                            <img src={socialImage3} alt="" className="img-fluid" />
                             <a href="https://www.instagram.com/mensco.in/"><i className="bi bi-instagram"></i></a>
 
                         </div>
                     </div>
                     <div className="col-lg-2 col-md-4">
                         <div className="social-wrapper position-relative overflow-hidden">
-                            <img src='/src/assets2/mc-product-5f.png' alt="" className="img-fluid" />
+                            <img src={socialImage4} alt="" className="img-fluid" />
                             <a href="https://www.instagram.com/mensco.in/"><i className="bi bi-instagram"></i></a>
 
                         </div>
                     </div>
                     <div className="col-lg-2 col-md-4">
                         <div className="social-wrapper position-relative overflow-hidden">
-                            <img src='/src/assets2/mc-product-6f.png' alt="" className="img-fluid" />
+                            <img src={socialImage5} alt="" className="img-fluid" />
+                            <a href="https://www.instagram.com/mensco.in/"><i className="bi bi-instagram"></i></a>
+
+                        </div>
+                    </div>
+                    <div className="col-lg-2 col-md-4">
+                        <div className="social-wrapper position-relative overflow-hidden">
+                            <img src={socialImage6} alt="" className="img-fluid" />
                             <a href="https://www.instagram.com/mensco.in/"><i className="bi bi-instagram"></i></a>
 
                         </div>
