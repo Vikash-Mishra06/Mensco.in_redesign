@@ -44,7 +44,7 @@ function Sales() {
                 <li className="position-relative active "><span className="ps-5">Sale Products</span></li>
             </ol>
 
-            <div className="shop-container">
+            <div className="shop-container slide-in">
                 <div className="container">
                     <h1 className="text-center py-4 fw-semibold">Sale Products</h1>
 

@@ -92,7 +92,7 @@ function Products() {
                         </div>
                     </div>
 
-                    <div className="row">
+                    <div className="row slide-in">
                         {displayedProducts.map(product => (
                             <div className="col-md-3 mb-4" key={product.id}>
                                 <div className="product-item text-center position-relative">

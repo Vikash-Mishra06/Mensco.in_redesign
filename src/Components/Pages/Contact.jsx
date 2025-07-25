@@ -40,7 +40,7 @@ function Contact() {
 
       <div className="row align-items-center g-5">
         
-        <div className="col-md-6">
+        <div className="col-md-6 slide-in">
           <img
             src={subBanner1}
             alt="contact art"

@@ -52,7 +52,7 @@ function Cart() {
                 {cartItems.length === 0 ? (
                     <div className="text-center">
                         <p className="lead text-muted">Your Cart is empty</p>
-                        <Link to='/shop' className='btn1'>
+                        <Link to='/products' className='btn1'>
                             <i className='ri-shopping-bag-line me-2'></i>Browse Products
                         </Link>
                     </div>

@@ -132,7 +132,7 @@ function ProductDetails() {
                 <div className="d-flex align-items-center">
                   <label className="me-3 fw-bold" style={{ fontSize: '16px' }}>Quantity:</label>
                   <div className="d-flex align-items-center">
-                    <button 
+                    <button
                       className="btn1 btn-dark btn-sm px-2 py-1"
                       onClick={() => setQuantity(Math.max(1, quantity - 1))}
                       style={{ fontSize: '20px', padding: '0 10px' }}
@@ -154,7 +154,7 @@ function ProductDetails() {
                         MozAppearance: 'textfield'
                       }}
                     />
-                    <button 
+                    <button
                       className="btn1 btn-dark btn-sm px-2 py-1"
                       onClick={() => setQuantity(quantity + 1)}
                       style={{ fontSize: '20px', padding: '0 10px' }}
@@ -166,37 +166,41 @@ function ProductDetails() {
               </div>
 
               <div className="button-group d-flex gap-4 mb-3">
-                <button 
+                <button
                   className="btn-custome2 w-100 border-0"
                   onClick={() => addToCart(product)}
                   style={{ height: '50px', fontSize: '16px' }}
                 >
                   <i className="bi bi-cart3 me-2"></i> ADD TO CART
                 </button>
-                <button 
+                <button
                   className="btn-custome2 w-100 border-0"
-                  onClick={() => addToCart(product)}
+                  onClick={() => addToWishlist(product)}
                   style={{ height: '50px', fontSize: '16px' }}
-                  
+
                 >
                   <i className="bi bi-heart me-2"></i> ADD TO WISHLIST
                 </button>
               </div>
 
               <div className="btn-custome2 mb-5">
-                
-                <button 
-                  className="btn-custome2 w-100 border-0"
-                  style={{ 
-                    height: '50px', 
+                <Link
+                  to='/checkout'
+                  className='w-100 d-flex justify-content-center align-items-center'
+                  style={{
+                    height: '50px',
                     fontSize: '16px',
                     backgroundColor: '#4e7661',
-                    color: 'white'
+                    color: 'white',
+                    borderRadius: '5px',
+                    textDecoration: 'none'
                   }}
                 >
-                  <Link to='/checkout' className='btn w-100'><i className="ri-shopping-cart-2-line"></i> Checkout</Link>
-                </button>
+                  <i className="ri-shopping-cart-2-line" style={{ marginRight: '8px' }}></i>
+                  Checkout
+                </Link>
               </div>
+
               <div className="product-meta">
                 <div className="d-flex mb-2">
                   <span className="text-muted me-2 fw-semibold" style={{ width: '120px', fontSize: '14px' }}>SKU:</span>
@@ -315,7 +319,7 @@ function ProductDetails() {
                     <div className="product-image w-100 position-relative overflow-hidden">
                       <img src={relatedProduct.image} alt="Primary" className="img-fluid" />
                       <img src={relatedProduct.secondaryImage} alt="Secondary" className="img-fluid" />
-                      
+
                       <div className="product-icons gap-3">
                         <div
                           className="product-icon gap-3"

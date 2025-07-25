@@ -47,23 +47,24 @@ body {
 
 .cart-count {
     font-size: 15px;
-    /* Slightly smaller */
+
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    /* Makes it circular */
+
     background-color: var(--primary-color);
     color: var(--white-color);
     font-weight: bold;
-    /* Improves visibility */
+
     line-height: 1;
-    /* Prevents vertical spacing issues */
+
     padding: 0;
-    /* Remove all padding */
 }
+
+/* --------------------------------------------------------------------------------------------------------------------- */
 
 /* Nav */
 
@@ -104,6 +105,8 @@ body {
     align-items: center;
 }
 
+/* --------------------------------------------------------------------------------------------------------------------- */
+
 /* signup/in */
 .sign-up-title {
     font-family: var(--Lora-font);
@@ -140,6 +143,7 @@ body {
     }
 }
 
+/* --------------------------------------------------------------------------------------------------------------------- */
 
 /* Hero Section*/
 .hero {
@@ -232,6 +236,7 @@ body {
   }
 }
 
+/* --------------------------------------------------------------------------------------------------------------------- */
 
 /* Products Section */
 
@@ -340,7 +345,9 @@ body {
     font-weight: 700;
 }
 
-/*  */
+/* --------------------------------------------------------------------------------------------------------------------- */
+
+/*section banner */
 .section-banner {
     background-color: #f5f5f5;
     color: var(--text-color);
@@ -363,14 +370,11 @@ body {
     text-decoration: none;
 }
 
-/* Add this */
 .section-banner a.active {
     font-weight: bold;
     color: var(--black-color);
-    /* override the default */
 }
 
-/* Optional: separator or line effect for active link */
 .section-banner li a.active::after {
     content: '';
     position: absolute;
@@ -396,6 +400,10 @@ body {
     color: var(--white-color);
 }
 
+@media (max-width: 767px) {
+    
+}
+/* ------------------------------------------------------------------------------------------------------------------- */
 
 .Quantity-box {
     margin: .1rem;
@@ -509,12 +517,16 @@ body {
     height: 5rem;
 }
 
+/* --------------------------------------------------------------------------------------------------------------------- */
+
 /* checkout */
 .checkout input {
     border: 1px solid #1a1a1a65;
 }
 
-/* banner */
+/* --------------------------------------------------------------------------------------------------------------------- */
+
+/* banner section*/
 .banner-img {
     width: 100%;
     height: 100%;
@@ -566,8 +578,9 @@ body {
     }
 }
 
+/* --------------------------------------------------------------------------------------------------------------------- */
 
-/* seen */
+/*as seen section*/
 .seen-in {
     background-color: var(--section-color);
     padding: 6% 0;
@@ -585,8 +598,9 @@ body {
     }
 }
 
+/* --------------------------------------------------------------------------------------------------------------------- */
 
-/* Favourite */
+/* Favourite section*/
 .favourite-beauty-banner {
     overflow: hidden;
     position: relative;
@@ -635,8 +649,9 @@ body {
     }
 }
 
+/* --------------------------------------------------------------------------------------------------------------------- */
 
-/* discover */
+/* discover section*/
 .section-image {
     width: 100%;
     height: 510px;
@@ -690,34 +705,58 @@ body {
     }
 }
 
+@media (max-width: 767px){
+    .section-image{
+        height: 450px;
+    }
+}
 
-/* social */
+/* --------------------------------------------------------------------------------------------------------------------- */
+
+
+/* social section */
 .social-wrapper {
     position: relative;
     cursor: pointer;
+    overflow: hidden;
 }
 
 .social-wrapper img {
     width: 100%;
     height: 100%;
     border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
 }
-.social-wrapper img:hover{
+
+.social-wrapper img:hover {
     transform: scale(1.1);
 }
 
-.social-wrapper i {
+.social-wrapper a {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 2rem;
-    color: var(--white-color);
-    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    text-decoration: none;
+    z-index: 2;
     opacity: 0;
     transition: var(--transition-regular);
 }
 
+.social-wrapper i {
+    font-size: 1.8rem;
+    color: var(--white-color);
+    animation: rotate 2s linear infinite;
+}
+
+/* dark overlay */
 .social-wrapper::after {
     content: '';
     position: absolute;
@@ -731,14 +770,22 @@ body {
     transition: var(--transition-regular);
 }
 
-.social-wrapper:hover i,
+/* show icon + overlay on hover */
+.social-wrapper:hover a,
 .social-wrapper:hover::after {
     opacity: 1;
 }
 
+/* rotate animation */
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
 
 
-/* footer */
+/* --------------------------------------------------------------------------------------------------------------------- */
+
+/* footer section*/
 .footer {
     background-color: #EDF1F0;
 }
@@ -777,8 +824,9 @@ body {
     font-size: 16px;
 }
 
+/* --------------------------------------------------------------------------------------------------------------------- */
 
-/* About */
+/* About section*/
 .about-hero-section {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/Images/Mc-hero1.png) !important;
     background-size: cover;
@@ -840,8 +888,9 @@ body {
     }
 }
 
+/* --------------------------------------------------------------------------------------------------------------------- */
 
-/* shop */
+/* shop section*/
 .shop-banner {
     background-color: #f5f5f5;
     color: var(--text-color);
@@ -872,16 +921,13 @@ body {
     color: var(--black-color) !important;
 }
 
-
+/* --------------------------------------------------------------------------------------------------------------------- */
 
 /* contact */
 .contact-section {
     margin-top: 60px;
 }
 
-
-/* ===== Simple Animations CSS File ===== */
-/* Add this to your project and use the classes below */
 
 /* 1. Fade In Animation */
 .fade-in {
@@ -967,4 +1013,5 @@ body {
 .product-icon:hover {
   animation: bounce 0.3s;
 }
+
 

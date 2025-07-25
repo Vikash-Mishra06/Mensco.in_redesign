@@ -65,8 +65,8 @@ function About() {
                         <motion.div className="col-md-8 mx-auto text-center" variants={itemVariants}>
                             <p className="text-uppercase text-white small mb-2 letter-spacing-2">Our Story</p>
                             <h1 className="fw-bold display-4 text-white mb-4">About <span>MENSCO</span></h1>
-                            <p className="lead text-white-50 mb-0">
-                                Crafting beauty essentials with passion and purpose since 2010
+                            <p className="lead text-white-50 mb-0 fw-semibold">
+                                Breaking the Mold: Redefining Skincare for Modern Indian Men Since 2024.
                             </p>
                         </motion.div>
                     </motion.div>
@@ -119,7 +119,7 @@ function About() {
                             <p className="text-muted mb-4">
                                 Mensco is thoughtfully crafted for Indian men, addressing skin damage, aging, and pollution exposure with high-quality and easy-to-use products. Backed by science, our products are formulated to deliver tangible results.
                             </p>
-                            <ul className="list-unstyled">
+                            <ul className="">
                                 <li className="mb-2 d-flex align-items-start">
                                     <span className="me-2 text-primary">✓</span>
                                     <span>100% natural ingredients</span>

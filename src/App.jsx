@@ -30,9 +30,6 @@ function App() {
         <Route path='/products'element={<Products />} />
         <Route path='/contact'element={<Contact />} />
         <Route path='/sales'element={<Sales />} />
-
-
-
       </Routes>
       <Footer />
     </>

@@ -367,7 +367,7 @@ function Index() {
                         </div>
                         <div className="discover-info mt-3">
                             <div>Winter Collection</div>
-                            <Link to='/sale' className="btn mt-2">Shop Now <i className="bi bi-arrow-right ms-2"></i></Link>
+                            <Link to='/products' className="btn mt-2">Shop Now <i className="bi bi-arrow-right ms-2"></i></Link>
                         </div>
                     </div>
                     <div className="col-md-6 discover-card text-center" >
