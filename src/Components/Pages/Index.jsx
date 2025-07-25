@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from 'react';
+
 
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, EffectFade } from 'swiper/modules'
@@ -37,6 +38,71 @@ import socialImage6 from '/Images/mc-product-6f.png'
 
 
 function Index() {
+
+    const sectionRef = useRef(null);
+    const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setIsVisible(true);
+                    observer.disconnect(); // Only animate once
+                }
+            },
+            { threshold: 0.2 } // Trigger when 20% visible
+        );
+
+        if (sectionRef.current) {
+            observer.observe(sectionRef.current);
+        }
+
+        return () => observer.disconnect();
+    }, []);
+
+    const containerRef = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        if (containerRef.current) {
+            observer.observe(containerRef.current);
+        }
+
+        return () => {
+            if (containerRef.current) {
+                observer.unobserve(containerRef.current);
+            }
+        };
+    }, []);
+
+    const discoverRef = useRef(null);
+    const [isDiscoverVisible, setIsDiscoverVisible] = useState(false);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    setIsDiscoverVisible(true);
+                    observer.unobserve(entry.target);
+                }
+            });
+        });
+
+        if (discoverRef.current) observer.observe(discoverRef.current);
+
+        return () => {
+            if (discoverRef.current) observer.unobserve(discoverRef.current);
+        };
+    }, []);
 
     const [filterSortOption, setFilterSortOption] = useState('all');
 
@@ -121,7 +187,7 @@ function Index() {
             </div>
 
             {/* Products  */}
-            <div className="product-container py-5 my-3 slide-in">
+            <div className="product-container py-5 my-3" ref={containerRef}>
                 <div className="container position-relative">
                     <div className="row">
                         <div className="section-title mb-2 product-title text-center">
@@ -130,7 +196,7 @@ function Index() {
                         </div>
                     </div>
 
-                    
+
                     <Swiper
                         slidesPerView={4}
                         spaceBetween={20}
@@ -210,10 +276,10 @@ function Index() {
             </div>
 
             {/* Banner */}
-            <div className="banners py-5">
+            <div className="banners py-5" ref={sectionRef}>
                 <div className="container">
                     <div className="row g-5">
-                        <div className="col-md-6 discover-card text-center">
+                        <div className={`col-md-6 discover-card text-center ${isVisible ? 'fade-in-left' : 'hidden'}`}>
                             <div className="discover-img section-image rounded">
                                 <img src={subBanner1} alt="Winter Collection" className="img-fluid rounded" />
                             </div>
@@ -221,7 +287,7 @@ function Index() {
                                 <Link to='/products' className="btn mt-2 pulse">Explore Now <i className="bi bi-arrow-right ms-2"></i></Link>
                             </div>
                         </div>
-                        <div className="col-md-6 discover-card text-center">
+                        <div className={`col-md-6 discover-card text-center ${isVisible ? 'fade-in-right' : 'hidden'}`}>
                             <div className="discover-img section-image rounded">
                                 <img src={subBanner2} alt="Summer Collection" className="img-fluid rounded" />
                             </div>
@@ -355,13 +421,13 @@ function Index() {
             </div>
 
             {/* Discover */}
-            <div className="discover container">
+            <div className="discover container"  ref={discoverRef}>
                 <div className="section-title mb-5 favourite-beauty-title text-center">
                     <h2 className="fw-semibold fs-1">More to Discover</h2>
                     <p className="text-center">Our bundles were designed to conveniently package <br />your tanning essentials while saving your money</p>
                 </div>
                 <div className="row g-5">
-                    <div className="col-md-6 discover-card text-center" >
+                    <div className={`col-md-6 discover-card text-center ${isDiscoverVisible ? 'fade-in-left' : 'hidden'}`}>
                         <div className="discover-img section-image rounded">
                             <img src={discover1} alt="Winter Collection" className="img-fluid rounded" />
                         </div>
@@ -370,7 +436,7 @@ function Index() {
                             <Link to='/products' className="btn mt-2">Shop Now <i className="bi bi-arrow-right ms-2"></i></Link>
                         </div>
                     </div>
-                    <div className="col-md-6 discover-card text-center" >
+                    <div className={`col-md-6 discover-card text-center ${isDiscoverVisible ? 'fade-in-right' : 'hidden'}`}>
                         <div className="discover-img section-image rounded">
                             <img src={discover2} alt="Summer Collection" className="img-fluid rounded" />
                         </div>
